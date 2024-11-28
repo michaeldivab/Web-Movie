@@ -167,7 +167,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://www.youtube.com/watch?v=sCmCayvkABI"><img
-                                                        src="../public/img/Trending Medellin.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Trending%20Medellin.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/32RAq6JzY-w?si=l5nTqM2qGWru7m0m"><img
-                                                        src="../public/img/Trending Fast X.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Trending%20Fast%20X.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -227,7 +227,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/z1xJAyVKAPY?si=PqmdeAGiJMtv7Ioh"><img
-                                                        src="../public/img/Trending The Black Demon.png" class="w-100"
+                                                        src="../../public/img/Trending%20The%20Black%20Demon.png" class="w-100"
                                                         alt="img25"></a>
                                             </figure>
                                         </div>
@@ -256,7 +256,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/d9MyW72ELq0?si=FJgP37jUtQQ11SjM"><img
-                                                        src="../public/img/Trending Avatar.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Trending%20Avatar.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -318,7 +318,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/IAdCsNtEuBU?si=Yl1w7hyJkV1lyuni"><img
-                                                        src="../public/img/New Relesae Ghosted.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/New%20Relesae%20Ghosted.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -347,7 +347,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/qEVUtrk8_B4?si=rrRYzg3il67XvSPO"><img
-                                                        src="../public/img/New Release John Wick.png" class="w-100"
+                                                        src="../../public/img/New%20Release%20John%20Wick.png" class="w-100"
                                                         alt="img25"></a>
                                             </figure>
                                         </div>
@@ -377,7 +377,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/JqcncLPi9zw?si=hM3OkGSzGje71KnC"><img
-                                                        src="../public/img/New Release guardian of the galaxy.png" class="w-100"
+                                                        src="../../public/img/New%20Release%20guardian%20of%20the%20galaxy.png" class="w-100"
                                                         alt="img25"></a>
                                             </figure>
                                         </div>
@@ -444,7 +444,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/67MaSPjGHSs?si=IweEfbyjx2fOn0T-"><img
-                                                            src="../public/img/Recom Robots.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Recom%20Robots.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -477,7 +477,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/CQDXtD2HJAs?si=EY3xM7d-6KPjivcm"><img
-                                                            src="../public/img/Recom Love Again.png" class="w-100"
+                                                            src="../../public/img/Recom%20Love%20Again.png" class="w-100"
                                                             alt="img25"></a>
                                                 </figure>
                                             </div>
@@ -513,7 +513,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/N-qn4h-amyY?si=VOTj3mqxHdOYB1ua"><img
-                                                            src="../public/img/Recom Hypnotic.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Recom%20Hypnotic.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -545,7 +545,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/K9TX-6HyuOc?si=6MOQrwop35hE6UuP"><img
-                                                            src="../public/img/Recom Paint.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Recom%20Paint.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -582,7 +582,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/8ZYhuvIv1pA?si=7fRl4Ah-HpzRXpl_"><img
-                                                            src="../public/img/Series Silo.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Series%20Silo.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -614,7 +614,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/Se26Op9sEC8?si=lZVtFyy2xR5Fnmqk"><img
-                                                            src="../public/img/Series Black Knight.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Series%20Black%20Knight.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -648,7 +648,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/3_y2j72Cfe4?si=JUckVg7Iqzy2tai2"><img
-                                                            src="../public/img/Series Drops of God.png" class="w-100" alt="img25"></a>
+                                                            src="../../public/img/Series%20Drops%20of%20God.png" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -681,7 +681,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/YDbnY9Obsfs?si=RNqcxQvdGRuzu6MG"><img
-                                                            src="../public/img/Series The Night Agent.png" class="w-100"
+                                                            src="../../public/img/Series%20The%20Night%20Agent.png" class="w-100"
                                                             alt="img25"></a>
                                                 </figure>
                                             </div>
@@ -1032,7 +1032,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/cZcHc3zEEoc?si=Yt9w2589u7Uq0lHH"><img
-                                                        src="../public/img/Like Scoop.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Like%20Scoop.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -1057,7 +1057,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/WVFl_BGbYrg?si=smmDqbL5Eac24bDx"><img
-                                                        src="../public/img/Like The Prank Panel.png" class="w-100"
+                                                        src="../../public/img/Like%20The%20Prank%20Panel.png" class="w-100"
                                                         alt="img25"></a>
                                             </figure>
                                         </div>
@@ -1083,7 +1083,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/8VNB7snSJxM?si=XfuaYg6YTAg2xSmt"><img
-                                                        src="../public/img/Like Nikita.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Like%20Nikita.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -1114,7 +1114,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/pDHqAj4eJcM?si=VzXWyBYXGBxJqLkU"><img
-                                                        src="../public/img/Like From.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Like%20From.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -1139,7 +1139,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/8lCyxWdAjzI?si=Lq-Mh4i31skpW3et"><img
-                                                        src="../public/img/Like Spy_Master.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Like%20Spy_Master.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -1164,7 +1164,7 @@
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/gln5grBHEU0?si=-ZM1DIG_sbUU-nDd"><img
-                                                        src="../public/img/Like Little Bird.png" class="w-100" alt="img25"></a>
+                                                        src="../../public/img/Like%20Little%20Bird.png" class="w-100" alt="img25"></a>
                                             </figure>
                                         </div>
                                     </div>
