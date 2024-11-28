@@ -388,14 +388,14 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="trend_2i row">
-                            @foreach ($items as $item)
+                            @foreach ($carousel as $item)
                             <div class="col-md-4">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/cZcHc3zEEoc?si=Yt9w2589u7Uq0lHH"><img
-                                                            src="{{ $item->poster }}" class="w-100" alt="img25" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                                                            src="{{ $item->poster }}" class="w-100" alt="img25" style="height: 225px; object-fit: cover;"></a>
                                             </figure>
                                         </div>
                                     </div>
@@ -418,14 +418,14 @@
                     </div>
                     <div class="carousel-item">
                         <div class="trend_2i row">
-                            @foreach ($items as $item)
+                            @foreach ($carousel as $item)
                             <div class="col-md-4">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/pDHqAj4eJcM?si=VzXWyBYXGBxJqLkU"><img
-                                                            src="{{$item->poster}}" class="w-100" alt="img25" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                                                            src="{{$item->poster}}" class="w-100" alt="img25" style="height: 225px; object-fit: cover;"></a>
                                             </figure>
                                         </div>
                                     </div>

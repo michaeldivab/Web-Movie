@@ -23,12 +23,19 @@ class RecommendationController extends Controller
         // Dapatkan data item dari ID rekomendasi
         $items = DB::table('movies')
             ->whereIn('id', $recommendations)
+            ->limit(4)
+            ->get();
+
+        $carousel = DB::table('movies')
+            ->whereIn('id', $recommendations)
+            ->limit(3)
             ->get();
 
         // Kirim data ke view
         return view('index', [
             'userId' => $userId,
-            'items' => $items
+            'items' => $items,
+            'carousel' => $carousel,
         ]);
     }
 
