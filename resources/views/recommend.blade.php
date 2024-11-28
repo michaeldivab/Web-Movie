@@ -19,7 +19,7 @@
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <img src="{{ $item->poster }}" alt="Sample Image" style="width: 200px; height: 200px; object-fit: cover;>
+                    <img src="{{ $item->poster }}" alt="Sample Image" style="width: 200px; height: 200px; object-fit: cover;">
                     <h5 class="card-title">{{ $item->title }}</h5>
                     <p class="card-text">Item ID: {{ $item->id }}</p>
                     <a href="#" class="btn btn-primary">View Details</a>

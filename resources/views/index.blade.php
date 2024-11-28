@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
 
     <!-- Include JS file using asset() -->
-    <script src="{{ asset('./js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('../js/bootstrap.bundle.min.js') }}"></script>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <div class="col-md-3">
                 <div class="top_1l pt-1">
                     <h3 class="mb-0"><a class="text-white" href="index.html"><i
-                                class="fa fa-video-camera col_red me-1"></i> Planet</a></h3>
+                                    class="fa fa-video-camera col_red me-1"></i> Planet</a></h3>
                 </div>
             </div>
             <div class="col-md-5">
@@ -121,7 +121,7 @@
                     <p class="mt-3">{{ $item->description }}</p>
                     <p class="mb-2"><span class="col_red me-1 fw-bold">Genres:</span> {{ $item->genre }}</p>
                     <h6 class="mt-4"><a class="button" href="https://youtu.be/d9MyW72ELq0?si=FJgP37jUtQQ11SjM"><i
-                                class="fa fa-play-circle align-middle me-1"></i> Watch Trailer</a></h6>
+                                    class="fa fa-play-circle align-middle me-1"></i> Watch Trailer</a></h6>
                 </div>
             </div>
             @endforeach
@@ -145,7 +145,7 @@
             <div class="col-md-6 col-6">
                 <div class="trend_1l">
                     <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Trending <span
-                            class="col_red">Movies</span></h4>
+                                class="col_red">Movies</span></h4>
                 </div>
             </div>
             <div class="col-md-6 col-6">
@@ -161,125 +161,38 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="trend_2i row">
+                            @foreach ($items as $item)
                             <div class="col-md-3 col-6">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
-                                                <a href="https://www.youtube.com/watch?v=sCmCayvkABI"><img
-                                                        src="../../public/img/Trending%20Medellin.png" class="w-100" alt="img25"></a>
+                                                <a href="https://www.youtube.com/watch?v=sCmCayvkABI">
+                                                    <img src="{{ $item->poster }}" class="w-100" alt="img25"
+                                                         style="height: 500px; object-fit: cover;">
+                                                </a>
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/sCmCayvkABI?si=aWEPZmqm26qdP8n6"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
                                 </div>
                                 <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/sCmCayvkABI?si=aWEPZmqm26qdP8n6">Medellin</a>
+                                    <h5>
+                                        <a class="col_red" href="https://youtu.be/sCmCayvkABI?si=aWEPZmqm26qdP8n6">{{
+                                            $item->title }}</a>
                                     </h5>
-                                    <p class="mb-2">Reda is a French wannabe tough guy who manages a...</p>
+                                    <p class="mb-2" style="max-height: 60px; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;">
+                                        {{ $item->description }}
+                                    </p>
                                     <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </span>
                                     <p class="mb-0">1 Views</p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-6">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/32RAq6JzY-w?si=l5nTqM2qGWru7m0m"><img
-                                                        src="../../public/img/Trending%20Fast%20X.png" class="w-100" alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/32RAq6JzY-w?si=l5nTqM2qGWru7m0m"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
-                                </div>
-                                <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/32RAq6JzY-w?si=l5nTqM2qGWru7m0m">Fast
-                                            X</a></h5>
-                                    <p class="mb-2">It stars Vin Diesel as Dominic Toretto alongside an ensemble
-                                        cast...</p>
-                                    <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star-half-o"></i>
-		</span>
-                                    <p class="mb-0">1 Views</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/z1xJAyVKAPY?si=PqmdeAGiJMtv7Ioh"><img
-                                                        src="../../public/img/Trending%20The%20Black%20Demon.png" class="w-100"
-                                                        alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/z1xJAyVKAPY?si=PqmdeAGiJMtv7Ioh"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
-                                </div>
-                                <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/z1xJAyVKAPY?si=PqmdeAGiJMtv7Ioh">The
-                                            Black Demon</a></h5>
-                                    <p class="mb-2">Nixon Oil company inspector Paul Sturges is sent to a...</p>
-                                    <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                    <p class="mb-0">1 Views</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/d9MyW72ELq0?si=FJgP37jUtQQ11SjM"><img
-                                                        src="../../public/img/Trending%20Avatar.png" class="w-100" alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/d9MyW72ELq0?si=FJgP37jUtQQ11SjM"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
-                                </div>
-                                <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/d9MyW72ELq0?si=FJgP37jUtQQ11SjM">Avatar:
-                                            The Way of Water</a></h5>
-                                    <p class="mb-2">Set more than a decade after the events of the first film...</p>
-                                    <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star-half-o"></i>
-		</span>
-                                    <p class="mb-0">1 Views</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -296,7 +209,7 @@
             <div class="col-md-6 col-6">
                 <div class="trend_1l">
                     <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> New Release <span
-                            class="col_red">Movies</span></h4>
+                                class="col_red">Movies</span></h4>
                 </div>
             </div>
             <div class="col-md-6 col-6">
@@ -312,97 +225,38 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="trend_2i row">
-                            <div class="col-md-4">
+                            @foreach ($items as $item)
+                            <div class="col-md-3 col-6">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/IAdCsNtEuBU?si=Yl1w7hyJkV1lyuni"><img
-                                                        src="../../public/img/New%20Relesae%20Ghosted.png" class="w-100" alt="img25"></a>
+                                                <a href="https://www.youtube.com/watch?v=sCmCayvkABI">
+                                                    <img src="{{ $item->poster }}" class="w-100" alt="img25"
+                                                         style="height: 500px; object-fit: cover;">
+                                                </a>
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/IAdCsNtEuBU?si=Yl1w7hyJkV1lyuni"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
                                 </div>
                                 <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/IAdCsNtEuBU?si=Yl1w7hyJkV1lyuni">Ghosted</a>
+                                    <h5>
+                                        <a class="col_red" href="https://youtu.be/sCmCayvkABI?si=aWEPZmqm26qdP8n6">{{
+                                            $item->title }}</a>
                                     </h5>
-                                    <p class="mb-2">American romantic action-adventure comedy film directed by...</p>
+                                    <p class="mb-2" style="max-height: 60px; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;">
+                                        {{ $item->description }}
+                                    </p>
                                     <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star-half-o"></i>
-		</span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </span>
                                     <p class="mb-0">1 Views</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/qEVUtrk8_B4?si=rrRYzg3il67XvSPO"><img
-                                                        src="../../public/img/New%20Release%20John%20Wick.png" class="w-100"
-                                                        alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/qEVUtrk8_B4?si=rrRYzg3il67XvSPO"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
-                                </div>
-                                <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/qEVUtrk8_B4?si=rrRYzg3il67XvSPO">John
-                                            Wick:Chapter 4</a></h5>
-                                    <p class="mb-2">John Wick uncovers a path to defeating The High Table...</p>
-                                    <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                    <p class="mb-0">1 Views</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/JqcncLPi9zw?si=hM3OkGSzGje71KnC"><img
-                                                        src="../../public/img/New%20Release%20guardian%20of%20the%20galaxy.png" class="w-100"
-                                                        alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix text-center position-absolute w-100 top-0">
-                                        <span class="fs-1"><a class="col_red"
-                                                              href="https://youtu.be/JqcncLPi9zw?si=hM3OkGSzGje71KnC"><i
-                                                    class="fa fa-youtube-play"></i></a></span>
-                                    </div>
-                                </div>
-                                <div class="trend_2ilast bg_grey p-3 clearfix">
-                                    <h5><a class="col_red" href="https://youtu.be/JqcncLPi9zw?si=hM3OkGSzGje71KnC">Guardian
-                                            of the Galaxy</a></h5>
-                                    <p class="mb-2">American superhero film based on the Marvel Comics...</p>
-                                    <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star-half-o"></i>
-		</span>
-                                    <p class="mb-0">1 Views</p>
-                                </div>
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
 </section>
@@ -413,29 +267,15 @@
             <div class="col-md-12">
                 <div class="trend_1l">
                     <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Recommended <span
-                            class="col_red">Movies</span></h4>
+                                class="col_red">Movies</span></h4>
                 </div>
             </div>
-        </div>
-        <div class="row popular_1 mt-4">
-            <ul class="nav nav-tabs  border-0 mb-0">
-                <li class="nav-item">
-                    <a href="#home" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
-                        <span class="d-md-block">MOVIES</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#profile" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
-                        <span class="d-md-block">SERIES</span>
-                    </a>
-                </li>
-
-            </ul>
         </div>
         <div class="popular_2 row mt-4">
             <div class="tab-content">
                 <div class="tab-pane active" id="home">
                     <div class="popular_2i row">
+                        @foreach ($items as $item)
                         <div class="col-md-6">
                             <div class="popular_2i1 row">
                                 <div class="col-md-4 col-4">
@@ -444,7 +284,7 @@
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/67MaSPjGHSs?si=IweEfbyjx2fOn0T-"><img
-                                                            src="../../public/img/Recom%20Robots.png" class="w-100" alt="img25"></a>
+                                                                src="{{ $item->poster }}" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -454,14 +294,15 @@
                                 </div>
                                 <div class="col-md-8 col-8">
                                     <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/67MaSPjGHSs?si=IweEfbyjx2fOn0T-">Robots</a>
+                                        <h5><a class="col_red" href="https://youtu.be/67MaSPjGHSs?si=IweEfbyjx2fOn0T-">{{
+                                                $item->title }}</a>
                                         </h5>
-                                        <h6>Romantic</h6>
+                                        <h6>{{ $item->genre }}</h6>
                                         <h6> Imdb 8.2 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 49m</span></h6>
-                                        <p>Affluent suburbanites Elaine and Charles illegally use android doubles of
-                                            themselves to avoid the time constraints of dating and the strain of
-                                            work.</p>
+                                            Year : {{$item->year}} <span class="ms-2">Runtime: 1h 49m</span></h6>
+                                        <p class="mb-2" style="max-height: 60px; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;">
+                                            {{ $item->description }}
+                                        </p>
                                         <h6 class="mb-0"><a class="button"
                                                             href="https://youtu.be/67MaSPjGHSs?si=IweEfbyjx2fOn0T-">
                                                 More Info - Trailer</a></h6>
@@ -469,120 +310,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/CQDXtD2HJAs?si=EY3xM7d-6KPjivcm"><img
-                                                            src="../../public/img/Recom%20Love%20Again.png" class="w-100"
-                                                            alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/CQDXtD2HJAs?si=EY3xM7d-6KPjivcm">Love
-                                                Again</a></h5>
-                                        <h6>Romantic, Comedy</h6>
-                                        <h6> Imdb 8.3 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 2h 29m</span></h6>
-                                        <p>A young woman tries to ease the pain of her fiancé's death by sending texts
-                                            to his old cell phone number, and forms a connection with the man the
-                                            number.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/CQDXtD2HJAs?si=EY3xM7d-6KPjivcm">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular_2i row mt-4">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/N-qn4h-amyY?si=VOTj3mqxHdOYB1ua"><img
-                                                            src="../../public/img/Recom%20Hypnotic.png" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/N-qn4h-amyY?si=VOTj3mqxHdOYB1ua">Hypnotic</a>
-                                        </h5>
-                                        <h6>Action</h6>
-                                        <h6> Imdb 8.4 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 59m</span></h6>
-                                        <p>A detective investigates a mystery involving his missing daughter and a
-                                            secret government program.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/N-qn4h-amyY?si=VOTj3mqxHdOYB1ua">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/K9TX-6HyuOc?si=6MOQrwop35hE6UuP"><img
-                                                            src="../../public/img/Recom%20Paint.png" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/K9TX-6HyuOc?si=6MOQrwop35hE6UuP">Paint</a>
-                                        </h5>
-                                        <h6>Comedy</h6>
-                                        <h6> Imdb 8.6 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 48m</span></h6>
-                                        <p>Paint is an American independent comedy film written and directed by Brit
-                                            McAdams. The film stars Owen Wilson, Michaela Watkins, Wendi
-                                            McLendon-Covey.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/K9TX-6HyuOc?si=6MOQrwop35hE6UuP">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane" id="profile">
                     <div class="popular_2i row">
                         <div class="col-md-6">
                             <div class="popular_2i1 row">
+                                @foreach ($items as $item)
                                 <div class="col-md-4 col-4">
                                     <div class="popular_2i1lm position-relative clearfix">
                                         <div class="popular_2i1lm1 clearfix">
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
                                                     <a href="https://youtu.be/8ZYhuvIv1pA?si=7fRl4Ah-HpzRXpl_"><img
-                                                            src="../../public/img/Series%20Silo.png" class="w-100" alt="img25"></a>
+                                                                src="{{ $item->poster }}" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -590,31 +332,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/8ZYhuvIv1pA?si=7fRl4Ah-HpzRXpl_">Silo</a>
-                                        </h5>
-                                        <h6>Drama</h6>
-                                        <h6> Imdb 8.2 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 49m</span></h6>
-                                        <p>In a bleak dystopian future, humanity clings to survival deep underground
-                                            within the confines of a colossal silo.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/8ZYhuvIv1pA?si=7fRl4Ah-HpzRXpl_">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="popular_2i1 row">
+                                @foreach ($items as $item)
                                 <div class="col-md-4 col-4">
                                     <div class="popular_2i1lm position-relative clearfix">
                                         <div class="popular_2i1lm1 clearfix">
                                             <div class="grid">
                                                 <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/Se26Op9sEC8?si=lZVtFyy2xR5Fnmqk"><img
-                                                            src="../../public/img/Series%20Black%20Knight.png" class="w-100" alt="img25"></a>
+                                                    <a href="https://youtu.be/8ZYhuvIv1pA?si=7fRl4Ah-HpzRXpl_"><img
+                                                                src="{{ $item->poster }}" class="w-100" alt="img25"></a>
                                                 </figure>
                                             </div>
                                         </div>
@@ -622,379 +352,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/Se26Op9sEC8?si=lZVtFyy2xR5Fnmqk">Black
-                                                Knight</a></h5>
-                                        <h6>Action</h6>
-                                        <h6> Imdb 8.3 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 2h 29m</span></h6>
-                                        <p>A legendary delivery driver 5-8 with exceptional battle skills and a refugee
-                                            Sawol who dreams of following in his footsteps.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/Se26Op9sEC8?si=lZVtFyy2xR5Fnmqk">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular_2i row mt-4">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/3_y2j72Cfe4?si=JUckVg7Iqzy2tai2"><img
-                                                            src="../../public/img/Series%20Drops%20of%20God.png" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/3_y2j72Cfe4?si=JUckVg7Iqzy2tai2">Drops
-                                                of God</a></h5>
-                                        <h6>Drama</h6>
-                                        <h6> Imdb 8.4 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 59m</span></h6>
-                                        <p>A woman discovers the world's greatest wine collection that's left by her
-                                            estranged father and competes against a Japanese man to claim her
-                                            inheritance.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/3_y2j72Cfe4?si=JUckVg7Iqzy2tai2">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="https://youtu.be/YDbnY9Obsfs?si=RNqcxQvdGRuzu6MG"><img
-                                                            src="../../public/img/Series%20The%20Night%20Agent.png" class="w-100"
-                                                            alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="https://youtu.be/YDbnY9Obsfs?si=RNqcxQvdGRuzu6MG">The
-                                                Night Agent</a></h5>
-                                        <h6>Action, Drama</h6>
-                                        <h6> Imdb 8.6 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2023 <span class="ms-2">Runtime: 1h 48m</span></h6>
-                                        <p>Conspiracy ThrillerActionDramaThriller. Low-level FBI agent Peter Sutherland
-                                            works in the basement of the White House manning a phone that never
-                                            rings.</p>
-                                        <h6 class="mb-0"><a class="button"
-                                                            href="https://youtu.be/YDbnY9Obsfs?si=RNqcxQvdGRuzu6MG">
-                                                More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="settings">
-                    <div class="popular_2i row">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/26.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Semp Porta</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.2 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 49m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/27.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Eget Diam</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.3 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 2h 29m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular_2i row mt-4">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/28.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Quis Sem</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.4 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 59m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/29.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Ipsum Lorem</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.6 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 48m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="settings_o">
-                    <div class="popular_2i row">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/18.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Semp Porta</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.2 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 49m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/19.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Eget Diam</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.3 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 2h 29m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular_2i row mt-4">
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/20.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Quis Sem</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.4 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 59m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="popular_2i1 row">
-                                <div class="col-md-4 col-4">
-                                    <div class="popular_2i1lm position-relative clearfix">
-                                        <div class="popular_2i1lm1 clearfix">
-                                            <div class="grid">
-                                                <figure class="effect-jazz mb-0">
-                                                    <a href="#"><img src="../public/img/21.jpg" class="w-100" alt="img25"></a>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
-                                            <ul>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-link col_red"></i></a></li>
-                                                <li class="d-inline-block"><a href="#"><i
-                                                            class="fa fa-search col_red"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8 col-8">
-                                    <div class="popular_2i1r">
-                                        <h5><a class="col_red" href="#">Ipsum Lorem</a></h5>
-                                        <h6>Action, Thriller</h6>
-                                        <h6> Imdb 8.6 <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span>
-                                            Year : 2022 <span class="ms-2">Runtime: 1h 48m</span></h6>
-                                        <p>Four waves of increasingly deadly alien attacks have left most of ruin.
-                                            Cassie is on the run, desperately trying to save her younger brother.</p>
-                                        <h6 class="mb-0"><a class="button" href="#"> More Info - Trailer</a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -1026,18 +388,19 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="trend_2i row">
+                            @foreach ($items as $item)
                             <div class="col-md-4">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/cZcHc3zEEoc?si=Yt9w2589u7Uq0lHH"><img
-                                                        src="../../public/img/Like%20Scoop.png" class="w-100" alt="img25"></a>
+                                                            src="{{ $item->poster }}" class="w-100" alt="img25" style="width: 100px; height: 100px; object-fit: cover;"></a>
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/cZcHc3zEEoc?si=Yt9w2589u7Uq0lHH">Scoop</a>
+                                        <h5><a class="col_red" href="https://youtu.be/cZcHc3zEEoc?si=Yt9w2589u7Uq0lHH">{{$item->title}}</a>
                                         </h5>
                                         <span class="col_red">
 		 <i class="fa fa-star"></i>
@@ -1049,77 +412,25 @@
                                         <p class="mb-0">2 Views</p>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/WVFl_BGbYrg?si=smmDqbL5Eac24bDx"><img
-                                                        src="../../public/img/Like%20The%20Prank%20Panel.png" class="w-100"
-                                                        alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/WVFl_BGbYrg?si=smmDqbL5Eac24bDx">The
-                                                Prank Panel</a></h5>
-                                        <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                        <p class="mb-0">1 Views</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/8VNB7snSJxM?si=XfuaYg6YTAg2xSmt"><img
-                                                        src="../../public/img/Like%20Nikita.png" class="w-100" alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/8VNB7snSJxM?si=XfuaYg6YTAg2xSmt">Nikita</a>
-                                        </h5>
-                                        <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                        <p class="mb-0">4 Views</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="trend_2i row">
-
+                            @foreach ($items as $item)
                             <div class="col-md-4">
                                 <div class="trend_2im clearfix position-relative">
                                     <div class="trend_2im1 clearfix">
                                         <div class="grid">
                                             <figure class="effect-jazz mb-0">
                                                 <a href="https://youtu.be/pDHqAj4eJcM?si=VzXWyBYXGBxJqLkU"><img
-                                                        src="../../public/img/Like%20From.png" class="w-100" alt="img25"></a>
+                                                            src="{{$item->poster}}" class="w-100" alt="img25" style="width: 100px; height: 100px; object-fit: cover;"></a>
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/pDHqAj4eJcM?si=VzXWyBYXGBxJqLkU">Form</a>
+                                        <h5><a class="col_red" href="https://youtu.be/pDHqAj4eJcM?si=VzXWyBYXGBxJqLkU">{{$item->title}}</a>
                                         </h5>
                                         <span class="col_red">
 		 <i class="fa fa-star"></i>
@@ -1133,57 +444,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/8lCyxWdAjzI?si=Lq-Mh4i31skpW3et"><img
-                                                        src="../../public/img/Like%20Spy_Master.png" class="w-100" alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/8lCyxWdAjzI?si=Lq-Mh4i31skpW3et">Spy/Master</a>
-                                        </h5>
-                                        <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                        <p class="mb-0">6 Views</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-md-4">
-                                <div class="trend_2im clearfix position-relative">
-                                    <div class="trend_2im1 clearfix">
-                                        <div class="grid">
-                                            <figure class="effect-jazz mb-0">
-                                                <a href="https://youtu.be/gln5grBHEU0?si=-ZM1DIG_sbUU-nDd"><img
-                                                        src="../../public/img/Like%20Little%20Bird.png" class="w-100" alt="img25"></a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="trend_2im2 clearfix  position-absolute w-100 top-0">
-                                        <h5><a class="col_red" href="https://youtu.be/gln5grBHEU0?si=-ZM1DIG_sbUU-nDd">Little
-                                                Bird</a></h5>
-                                        <span class="col_red">
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		 <i class="fa fa-star"></i>
-		</span>
-                                        <p class="mb-0">5 Views</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
