@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #3c0000, #fc2525);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #2575fc;
+    background-color: #fc2525;
     border: none;
     border-radius: 20px;
     padding: 0.5rem 2rem;
